@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Book a Course</title>
     <style>
+        legend {
+            color: #004050;
+            font-size: large;
+            font-family: fantasy;
+        }
         ul {
             list-style: none;
         }
-        
+
+        #course {
+            list-style-image: url("images/logobullet.png");
+
+        }
+
         li {
             margin: 5px 0;
         }
-        
+
         label {
             display: inline-block;
             width: 100px;
@@ -18,13 +29,54 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <img src="images/logo.png" alt="QA Corporate Logo">
-        <h1 style="background-image:url(images/trainer.jpg); padding: 4em 1em; color: white; background-size: cover">Course Registration</h1> 
+        <h1 style="background-image:url(images/trainer.jpg); padding: 4em 1em; color: white; background-size: cover">
+            Course Registration</h1>
     </header>
-    
-    <!-- insert form here -->
-    
+
+    <form>
+        <fieldset>
+            <legend>Your Details</legend>
+            <ul>
+                <li>
+                    <label for="">First Name</label>
+                    <input type="text" name="FirstName" id="" autofocus>
+                </li>
+                <li>
+                    <label for="">Surname</label>
+                    <input type="text" name="Surname" id="">
+                </li>
+                <li>
+                    <label for="">Position/Role</label>
+                    <input type="text" name="Position/Role" id="">
+                </li>
+                <li>
+                    <label for="">Email</label>
+                    <input type="email" name="Email" id="email" placeholder="you@domain.com" required>
+                </li>
+                <li>
+                    <label for="Tel">Mobile no</label>
+                    <input type="tel" name="Tel" id="tel" placeholder="Eg. +447500000000”." required>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Course Details</legend>
+            <ul id="course">
+                <li>Programming with JavaScript</li>
+                <li>Developing Web Applications using HTML5</li>
+                <li>Developing Responsive Websites</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <button>Submit</button>
+        </fieldset>
+    </form>
+
 </body>
+
 </html>
